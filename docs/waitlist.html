@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Neuro Charge – Join the Waitlist</title>
+	<meta name="description" content="Neuro Charge – adaptive, plant-based, nicotine-free wellbeing device. Join the early access waitlist." />
+	<meta property="og:title" content="Neuro Charge – Adaptive Wellbeing Device" />
+	<meta property="og:description" content="Personalised calm, focus & balance. Join the early waitlist." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="PASTE_IMAGE_URL_HERE" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<style>
+		:root {
+			--bg:#f6f9fc; --primary:#0366d6; --primary-accent:#005bbf; --radius:14px; --focus:#ffbf47; --danger:#d62828; --ok:#0a7d33; --grad:linear-gradient(135deg,#d1e8ff,#eef7ff 40%,#ffffff);
+			--shadow:0 4px 12px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05);
+		}
+		* { box-sizing:border-box; }
+		body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; background:var(--bg); color:#1c2228; -webkit-font-smoothing:antialiased; }
+		header { text-align:center; padding:3.3rem 1rem 2.5rem; background:var(--grad); position:relative; overflow:hidden; }
+		header:before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 75% 30%,rgba(0,123,255,.15),transparent 60%); pointer-events:none; }
+		header img { max-width:240px; width:60%; min-width:180px; border-radius:16px; margin-bottom:1.2rem; box-shadow:var(--shadow); }
+		header h1 { font-size:clamp(2rem,5vw,2.9rem); margin:0 0 .4rem; letter-spacing:.5px; }
+		header p { font-size:clamp(1rem,1.6vw,1.25rem); max-width:720px; margin:.2rem auto 0; line-height:1.35; }
+		main section { max-width:1060px; margin:auto; padding:2.2rem 1.1rem; }
+		h2 { text-align:center; margin:0 0 1.2rem; font-size:clamp(1.4rem,2.6vw,2rem); letter-spacing:.5px; }
+		.features { display:flex; flex-wrap:wrap; gap:1.4rem; justify-content:center; }
+		.feature { background:#fff; padding:1.4rem 1.2rem 1.3rem; flex:1 1 250px; border-radius:var(--radius); box-shadow:var(--shadow); position:relative; overflow:hidden; }
+		.feature:before { content:""; position:absolute; inset:0; background:linear-gradient(120deg,rgba(3,102,214,.08),transparent); opacity:0; transition:.4s; }
+		.feature:hover:before { opacity:1; }
+		.feature h3 { margin:.2rem 0 .4rem; font-size:1.05rem; }
+		ul { line-height:1.55; padding-left:1.2rem; }
+		.pill-row { display:flex; flex-wrap:wrap; gap:.5rem; margin:.6rem 0 0; }
+		.pill { background:#e6f1fe; color:#004b85; padding:.4rem .75rem; border-radius:30px; font-size:.72rem; letter-spacing:.5px; text-transform:uppercase; font-weight:600; }
+		.split { display:grid; gap:2rem; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); align-items:start; }
+		.panel { background:#fff; border-radius:var(--radius); padding:1.6rem 1.4rem 1.9rem; box-shadow:var(--shadow); position:relative; }
+		.panel h3 { margin:0 0 .9rem; font-size:1.1rem; }
+		form { display:grid; gap:1rem; }
+		label { font-size:.82rem; font-weight:600; letter-spacing:.5px; text-transform:uppercase; display:flex; justify-content:space-between; align-items:center; }
+		label span.req { color:var(--danger); font-weight:700; margin-left:.3rem; }
+		input[type=text], input[type=email], select, textarea { width:100%; padding:.8rem .85rem; border:1px solid #c8d5e3; border-radius:8px; font:inherit; background:#fbfdff; transition:.25s; }
+		textarea { min-height:120px; resize:vertical; }
+		input:focus, select:focus, textarea:focus { outline:2px solid var(--focus); outline-offset:1px; border-color:var(--primary); background:#fff; }
+		fieldset { border:1px solid #d8e2ec; padding:.9rem .95rem 1.05rem; border-radius:10px; background:#fcfdff; }
+		fieldset legend { padding:0 .4rem; font-size:.78rem; font-weight:600; text-transform:uppercase; letter-spacing:.6px; }
+		.chk-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:.55rem .9rem; margin-top:.6rem; }
+		.inline { display:flex; align-items:center; gap:.55rem; font-size:.78rem; }
+		button[type=submit] { background:var(--primary); color:#fff; border:none; padding:.95rem 1.4rem; border-radius:10px; font-size:1rem; cursor:pointer; font-weight:600; letter-spacing:.5px; box-shadow:var(--shadow); display:inline-flex; align-items:center; gap:.55rem; }
+		button[type=submit]:hover:not([disabled]) { background:var(--primary-accent); }
+		button[disabled] { opacity:.6; cursor:progress; }
+		.progress-wrap { background:#e5edf5; border-radius:40px; height:10px; width:100%; overflow:hidden; margin-top:.2rem; }
+		.progress-bar { background:linear-gradient(90deg,#0075ff,#5ba8ff); height:100%; width:0%; transition:width .35s ease; }
+		.tiny-note { font-size:.7rem; line-height:1.25; color:#5a6470; }
+		.error-msg { background:rgba(214,40,40,.08); border:1px solid rgba(214,40,40,.35); color:#a10; padding:.6rem .7rem; border-radius:8px; font-size:.8rem; display:none; }
+		.success-box { display:none; text-align:center; padding:2rem 1rem; }
+		.success-box h3 { margin:0 0 .6rem; font-size:1.4rem; }
+		.success-box p { margin:.2rem 0 .9rem; }
+		.counter { font-weight:600; color:var(--primary-accent); }
+		.badges { display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin:1.5rem 0 .2rem; }
+		.badge { background:#fff; border:1px solid #d5dee8; padding:.5rem .75rem; font-size:.65rem; font-weight:600; letter-spacing:.7px; border-radius:30px; display:inline-flex; align-items:center; gap:.4rem; text-transform:uppercase; }
+		.badge svg { width:14px; height:14px; }
+		.testimonials { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:1.2rem; }
+		.quote { background:#fff; border:1px solid #e2ecf3; padding:1rem .9rem 1.1rem; border-radius:12px; font-size:.85rem; line-height:1.35; position:relative; }
+		.quote:before { content:'“'; font-size:2.5rem; position:absolute; top:-10px; left:8px; color:#d0e2f4; font-family:Georgia,serif; }
+		.quote strong { display:block; margin-top:.7rem; font-size:.7rem; letter-spacing:.6px; color:#2d3d4b; text-transform:uppercase; }
+		.cta-centered { text-align:center; }
+		.hidden { display:none !important; }
+		.fade-in { animation:fade .45s ease; }
+		@keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0);} }
+		footer { text-align:center; font-size:.75rem; padding:2.2rem 1.2rem 2.6rem; color:#5a6470; }
+		a.plain { color:var(--primary); text-decoration:none; }
+		a.plain:hover { text-decoration:underline; }
+		.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); border:0; }
+		@media (max-width:640px){ fieldset legend { font-size:.7rem; } }
+	</style>
+</head>
+<body>
+	<header>
+		<img src="PASTE_IMAGE_URL_HERE" alt="Neuro Charge abstract visual" loading="lazy" />
+		<h1>Neuro Charge</h1>
+		<p>Patent‑Pending Adaptive Wellbeing Device – personalised calm, focus & balance using biometric‑informed, plant‑based formulations. Nicotine‑free. Privacy‑first.</p>
+		<div class="badges" aria-label="Highlights">
+			<div class="badge" title="Patent pending">
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>Patent Pending
+			</div>
+			<div class="badge" title="Nicotine free">🌿 Nicotine‑Free</div>
+			<div class="badge" title="Adaptive dosing">🧠 Adaptive</div>
+			<div class="badge" title="Privacy">🔐 Privacy First</div>
+		</div>
+	</header>
+	<main>
+		<section>
+		<h2 style="text-align:center;">About Neuro Charge</h2>
+		<p style="max-width:860px;margin:0 auto 1.1rem;text-align:center;">Neuro Charge is a plant‑based inhalable formulated to promote calm, focus and mental clarity. Adaptive algorithms and optional biometric inputs tune delivery while keeping user data local & encrypted.</p>
+		<div class="pill-row" aria-hidden="true" style="justify-content:center;">
+		<span class="pill">Adaptive Dosing</span>
+		<span class="pill">Plant-Based</span>
+		<span class="pill">Guided Breathing</span>
+		<span class="pill">Neurodivergent Friendly</span>
+		<span class="pill">Data Minimised</span>
+		</div>
+		</section>
+		<section>
+		<h2 style="text-align:center;">Key Benefits</h2>
+		<div class="features" style="justify-content:center;">
+		<div class="feature">
+		<h3>Adaptive Experience</h3>
+		<p style="text-align:center;">Smart dosing tuned to respiration, usage patterns & goals for a consistent effect curve.</p>
+		</div>
+		<div class="feature">
+		<h3>Plant-Based & Safe</h3>
+		<p style="text-align:center;">UK‑compliant botanicals (lavender, peppermint, chamomile) with transparency & batch QA.</p>
+		</div>
+		<div class="feature">
+		<h3>Privacy First</h3>
+		<p style="text-align:center;">Local analytics, selective opt‑in cloud sync, encrypted firmware & signed model pipeline.</p>
+		</div>
+		</div>
+		</section>
+		<section>
+		<h2 style="text-align:center;">What Makes It Different?</h2>
+		<ul style="max-width:760px;margin:0 auto;text-align:center;">
+		<li>Automatic shut‑off + session guidance to encourage healthy patterns.</li>
+		<li>Optional guided breathing & mindful focus sequences.</li>
+		<li>Multi‑sensory cues (light / haptics) to reinforce calm states.</li>
+		<li>Configurable accessibility & sensory sensitivity profiles.</li>
+		<li>Companion app (opt‑in) for habit tracking & personalised routines.</li>
+		</ul>
+		</section>
+		<section id="waitlist" class="cta-centered">
+			<h2 style="text-align:center;">Join the Early Access Waitlist</h2>
+			<p style="max-width:740px;margin:0 auto 1.4rem;text-align:center;">Be first to get device updates, influence feature roadmap & receive limited launch incentives.</p>
+			<div class="split">
+				<div class="panel" id="formPanel" aria-live="polite">
+					<h3 style="margin-top:0;">Request Early Access</h3>
+					<div class="progress-wrap" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+					<form id="waitlistForm" novalidate>
+						<div class="error-msg" id="formError" role="alert"></div>
+						<label>Email <span class="req" aria-hidden="true">*</span>
+							<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+						</label>
+						<label>First Name
+							<input type="text" name="first_name" autocomplete="given-name" placeholder="Optional" />
+						</label>
+						<label>Role / Perspective
+							<select name="role" aria-label="Role">
+								<option value="consumer">Consumer / User</option>
+								<option value="clinician">Clinician</option>
+								<option value="researcher">Researcher</option>
+								<option value="investor">Investor</option>
+								<option value="partner">Partner / Channel</option>
+								<option value="other">Other</option>
+							</select>
+						</label>
+						<fieldset>
+							<legend style="text-align:center;">Primary Interest (select any)</legend>
+							<div class="chk-grid" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;">
+								<label class="inline" style="justify-content:center;text-align:center;"><input type="checkbox" name="interest" value="calm"/> Calm</label>
+								<label class="inline" style="justify-content:center;text-align:center;"><input type="checkbox" name="interest" value="focus"/> Focus</label>
+								<label class="inline" style="justify-content:center;text-align:center;"><input type="checkbox" name="interest" value="sleep"/> Sleep</label>
+								<label class="inline" style="justify-content:center;text-align:center;"><input type="checkbox" name="interest" value="stress"/> Stress Regulation</label>
+								<label class="inline" style="justify-content:center;text-align:center;"><input type="checkbox" name="interest" value="neurodivergent"/> Neurodivergent Support</label>
+							</div>
+						</fieldset>
+						<label>Anything specific you're hoping for?
+							<textarea name="notes" placeholder="Optional: context, goals, pain points..."></textarea>
+						</label>
+						<label>Referral Code (optional)
+							<input type="text" name="ref" pattern="[A-Za-z0-9_-]{0,24}" placeholder="e.g. FRIEND2025" />
+						</label>
+						<div class="inline">
+							<input type="checkbox" id="consent" name="consent" required />
+							<label for="consent" style="margin:0;font-weight:500; text-transform:none; letter-spacing:0;">I agree to receive carefully curated early access updates.</label>
+						</div>
+						<div class="sr-only" aria-hidden="true">
+							<label>Leave this empty <input type="text" name="hp_field" tabindex="-1" autocomplete="off" /></label>
+						</div>
+						<button type="submit" id="submitBtn">
+							<span class="btn-text">Join Waitlist</span>
+							<svg id="spinner" class="hidden" viewBox="0 0 50 50" width="18" height="18"><circle cx="25" cy="25" r="20" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="31.4 31.4"><animateTransform attributeName="transform" type="rotate" dur="0.9s" repeatCount="indefinite" from="0 25 25" to="360 25 25"/></circle></svg>
+						</button>
+						<div class="tiny-note">We respect inboxes: low‑frequency, high‑signal updates. You can opt out anytime.</div>
+					</form>
+					<div class="success-box" id="successBox" tabindex="-1">
+						<h3>You're on the list 🎉</h3>
+						<p>We'll send a confirmation shortly. Share your referral code after you receive it to move up the queue.</p>
+						<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="background:#eef4fa;color:#124;box-shadow:none;border:1px solid #cfdbe7;">Back to Top</button>
+					</div>
+				</div>
+				<div class="panel fade-in">
+					<h3>Why Join?</h3>
+					<ul style="margin:0 0 1.2rem; padding-left:1.1rem; font-size:.9rem; line-height:1.5;">
+						<li>Influence feature roadmap & accessibility profiles.</li>
+						<li>Access early wellness protocol experiments.</li>
+						<li>Receive limited founder circle pricing.</li>
+						<li>Priority shipping when production batch opens.</li>
+						<li>Referral queue acceleration.</li>
+					</ul>
+					<h3 style="margin-top:0.2rem;">Roadmap Snapshot</h3>
+					<ul style="margin:0 0 1.2rem; padding-left:1.1rem; font-size:.85rem; line-height:1.45;">
+						<li><strong>Now:</strong> Refining adaptive dosing algorithm.</li>
+						<li><strong>Q4:</strong> Expanded botanicals & guided routines beta.</li>
+						<li><strong>Q1:</strong> App early access & neurodivergent mode presets.</li>
+					</ul>
+					<p class="tiny-note" style="margin:0;">We won't sell data. Aggregated, anonymised telemetry (optional opt‑in) helps improve safety & efficacy.</p>
+					<div style="margin-top:1.6rem;">
+						<h3 style="margin:.2rem 0 .6rem;">Referral Leaderboard</h3>
+						<div id="leaderboard" style="font-size:.72rem;display:grid;gap:.4rem;grid-template-columns:1fr auto;align-items:center;">
+							<div class="tiny-note">Loading…</div><div></div>
+						</div>
+						<div class="tiny-note" style="margin-top:.4rem;">Confirmed referrals only. Top 10 refreshes periodically.</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		Patent Pending © <span id="year"></span> Neuro Charge • Contact: <a class="plain" href="mailto:neurocharger@gmail.com">neurocharger@gmail.com</a> • <a class="plain" href="#waitlist">Join</a>
+		<br>
+		<span style="font-size:.8em;color:#888;">We respect your privacy. Data is used only for early access and product updates. <a href="#" onclick="alert('No personal data is sold or shared. You may request deletion at any time.');return false;">Learn more</a></span>
+	</footer>
+	<script>
+		(function(){
+			const form = document.getElementById('waitlistForm');
+			const errorBox = document.getElementById('formError');
+			const btn = document.getElementById('submitBtn');
+			const spinner = document.getElementById('spinner');
+			const success = document.getElementById('successBox');
+			const progress = document.getElementById('progressBar');
+			const countEl = document.getElementById('wlCount');
+			const requiredFields = ['email','consent'];
+			let baseCount = parseInt(countEl.textContent,10) || 700;
+			let animated = false;
+			const updateProgress = () => {
+				const data = new FormData(form);
+				let filled = 0; requiredFields.forEach(f=>{ if(data.get(f)) filled++; });
+				const width = Math.round((filled / requiredFields.length)*100);
+				progress.style.width = width + '%';
+			};
+			form.addEventListener('input', updateProgress);
+			updateProgress();
+			const simulateGrowth = () => {
+				if(animated) return; animated = true;
+				let target = baseCount + Math.floor(5 + Math.random()*20);
+				const step = () => { if(baseCount < target){ baseCount++; countEl.textContent = baseCount; requestAnimationFrame(step);} };
+				step();
+			};
+			setTimeout(simulateGrowth, 2500);
+			const validate = () => {
+				errorBox.style.display='none';
+				if(form.hp_field && form.hp_field.value) return 'Spam detected.';
+				if(!form.email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value)) return 'Enter a valid email address.';
+				if(!form.consent.checked) return 'Please provide consent to receive updates.';
+				if(form.ref.value && !/^[A-Za-z0-9_-]{2,24}$/.test(form.ref.value)) return 'Referral code format invalid.';
+				return null;
+			};
+			function buildShareBlock(referralCode){
+				if(!referralCode) return '';
+				const shareUrl = window.location.origin + window.location.pathname + '?ref=' + referralCode;
+				return `\n<div style="margin-top:1.4rem;">\n  <h4 style="margin:.2rem 0 .6rem;font-size:.9rem;letter-spacing:.5px;text-transform:uppercase;">Share & Jump the Queue</h4>\n  <div style="font-size:.75rem;word-break:break-all;">${shareUrl}</div>\n  <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem;">\n    <button type=button data-share="copy" style="background:#eef4fa;color:#124;box-shadow:none;border:1px solid #cfdbe7;padding:.55rem .9rem;border-radius:8px;cursor:pointer;font-size:.7rem;">Copy Link</button>\n    <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent('I joined the Neuro Charge adaptive wellbeing device waitlist – get in early: ' + shareUrl)}" target="_blank" rel="noopener" style="text-decoration:none;">\n      <button type=button style="background:#1d9bf0;color:#fff;border:none;padding:.55rem .9rem;border-radius:8px;cursor:pointer;font-size:.7rem;">Share X</button>\n    </a>\n    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener" style="text-decoration:none;">\n      <button type=button style="background:#0a66c2;color:#fff;border:none;padding:.55rem .9rem;border-radius:8px;cursor:pointer;font-size:.7rem;">Share LinkedIn</button>\n    </a>\n    <a href="mailto:?subject=Neuro%20Charge%20Waitlist&body=${encodeURIComponent('Thought you might like this adaptive wellbeing device: ' + shareUrl)}" style="text-decoration:none;">\n      <button type=button style="background:#555;color:#fff;border:none;padding:.55rem .9rem;border-radius:8px;cursor:pointer;font-size:.7rem;">Email</button>\n    </a>\n  </div>\n  <div class="tiny-note" style="margin-top:.6rem;">Each confirmed signup through your link helps you move up the queue.</div>\n</div>`;
+			}
+			form.addEventListener('submit', async (e)=>{
+				e.preventDefault();
+				const v = validate();
+				if(v){ errorBox.textContent = v; errorBox.style.display='block'; return; }
+				btn.disabled = true; spinner.classList.remove('hidden');
+				try {
+					const payload = Object.fromEntries(new FormData(form).entries());
+					const resp = await fetch('/api/waitlist', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
+					if(!resp.ok) throw new Error('Network');
+					const data = await resp.json();
+					form.classList.add('hidden');
+					success.style.display='block'; success.focus();
+					progress.style.width = '100%';
+					baseCount++; countEl.textContent = baseCount;
+					let confirmationNote = data.confirmed ? 'Your email is confirmed.' : 'Check your email to confirm your signup (needed to activate your referral code).';
+					const shareHtml = buildShareBlock(data.referral_code);
+					success.insertAdjacentHTML('beforeend', `<div style="font-size:.8rem;margin-top:1rem;">${confirmationNote}</div>${shareHtml}`);
+					if(shareHtml){
+						success.querySelector('[data-share="copy"]').addEventListener('click',()=>{
+							const url = window.location.origin + window.location.pathname + '?ref=' + data.referral_code;
+							navigator.clipboard.writeText(url).then(()=>{
+								alert('Referral link copied');
+							});
+						});
+					}
+				} catch(err){
+					errorBox.textContent = 'Submission failed. Please retry shortly.';
+					errorBox.style.display='block';
+				} finally {
+					spinner.classList.add('hidden'); btn.disabled=false;
+				}
+			});
+			// Pre-fill referral if present in query params
+			const params = new URLSearchParams(window.location.search);
+			const ref = params.get('ref');
+			if(ref && form.ref){ form.ref.value = ref; }
+			// Leaderboard fetch
+			async function loadLeaderboard(){
+				try {
+					const r = await fetch('/api/waitlist/leaderboard');
+					if(!r.ok) return; const data = await r.json();
+					const lb = document.getElementById('leaderboard');
+					if(!lb) return;
+					if(!data.leaderboard.length){ lb.innerHTML = '<div style="grid-column:span 2;" class="tiny-note">No referrals yet.</div>'; return; }
+					lb.innerHTML = data.leaderboard.map((e,i)=>`<div style="display:flex;align-items:center;gap:.4rem;">#${i+1} <strong>${e.first_name?e.first_name:'User'}</strong> <span style="opacity:.6;">(${e.email_mask})</span></div><div style="text-align:right;font-weight:600;">${e.referrals}</div>`).join('');
+				}catch(_){/* ignore */}
+			}
+			loadLeaderboard();
+			setInterval(loadLeaderboard, 30000);
+			document.getElementById('year').textContent = new Date().getFullYear();
+		})();
+	</script>
+</body>
+</html>
