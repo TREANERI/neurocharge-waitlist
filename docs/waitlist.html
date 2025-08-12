@@ -112,19 +112,14 @@
       <iframe title="Waitlist form" src="https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       -->
 
-      <!-- OPTION B (recommended): Formspree — background submit + email notifications to ao@neurochargemedical.com.
-  1) Create a free form at https://formspree.io (New > Form) and copy your endpoint that looks like: https://formspree.io/f/abcdwxyz
-  2) Paste that endpoint into the `action` below.
--->
-<form id="waitlist-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
-  <label class="sr-only" for="email">Email address</label>
-  <input id="email" name="email" type="email" placeholder="your@email.com" required />
-  <!-- Optional metadata -->
-  <input type="hidden" name="project" value="neurocharge-waitlist" />
-  <input type="hidden" name="to" value="ao@neurochargemedical.com" />
-  <button class="btn btn-primary" type="submit">Notify me</button>
-</form>
-<p class="note" id="waitlist-note">By joining, you agree to receive occasional updates. Unsubscribe anytime.</p>
+      <!-- OPTION C: Google Forms embed (free + auto Sheet). Replace the src with your live form URL. -->
+<div class="card">
+  <h3 class="sr-only">Waitlist form</h3>
+  <iframe title="Waitlist form"
+          src="https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?embedded=true"
+          width="100%" height="980" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+<p class="note">We only use your email to send Neuro Charge updates. Unsubscribe anytime.</p>
     </section>
 
     <section class="section">
@@ -141,35 +136,5 @@
     <div class="container small">© <span id="year"></span> Neuro Charge. Patent‑pending. All rights reserved.</div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script>
-    // Handle Formspree submission with AJAX to show a friendly success message
-    (function(){
-      var form = document.getElementById('waitlist-form');
-      if(!form) return;
-      form.addEventListener('submit', async function(e){
-        e.preventDefault();
-        var btn = form.querySelector('button[type="submit"]');
-        var note = document.getElementById('waitlist-note');
-        btn.disabled = true; btn.textContent = 'Sending…';
-        try {
-          var res = await fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
-          if (res.ok) {
-            form.reset();
-            btn.textContent = 'You’re on the list!';
-            note.textContent = 'Thanks! We’ll email updates to you from ao@neurochargemedical.com.';
-          } else {
-            btn.disabled = false; btn.textContent = 'Notify me';
-            note.textContent = 'Hmm, something went wrong. Please try again in a moment.';
-          }
-        } catch(err){
-          btn.disabled = false; btn.textContent = 'Notify me';
-          note.textContent = 'Network error. Please try again.';
-        }
-      });
-    })();
-  </script>
-</body>
+  </body>
 </html>
