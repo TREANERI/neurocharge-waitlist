@@ -38,7 +38,15 @@
     .section p.lead{margin:0 0 18px;color:var(--muted)}
     .founder-flex{display:flex;gap:24px;align-items:center;background:var(--card);padding:24px;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
     @media (max-width:640px){.founder-flex{flex-direction:column;text-align:center}}
-    .founder-img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--brand)}
+    ..founder-img {
+    width: 200px; /* Increased size for better clarity */
+    height: auto; /* Keeps the logo from stretching */
+    border-radius: 50%; /* Keeps the circular shape */
+    object-fit: contain; /* Ensures the whole logo fits inside */
+    background: white; /* Optional: adds a crisp white background behind the circle */
+    padding: 5px; /* Gives the logo some breathing room */
+    border: 2px solid var(--brand); /* Defines the edge clearly */
+           }
     footer{padding:30px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.08)}
     a{color:inherit}
     .small{font-size:12px;color:var(--muted)}
