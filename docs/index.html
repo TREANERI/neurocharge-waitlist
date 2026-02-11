@@ -3,31 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neurocharge Medical</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>NeuroCharge | Objective Support for Neurodivergent Lives</title>
+    <style>
+        :root {
+            --primary: #1a365d; /* Deep Navy */
+            --accent: #4fd1c5;  /* Calming Teal */
+            --bg: #f8fafc;
+            --text: #1e293b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 120px 20px 160px;
+            text-align: center;
+        }
+
+        .tagline {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+
+        header h1 {
+            font-size: clamp(2.4rem, 5vw, 3.4rem);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+
+        /* Ecosystem Cards */
+        .ecosystem {
+            display: flex;
+            gap: 25px;
+            margin-top: -80px;
+            padding: 0 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            flex: 1;
+            border-top: 6px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .content-block {
+            margin-bottom: 50px;
+        }
+
+        .list-style {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .list-item {
+            margin-bottom: 18px;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.15rem;
+        }
+
+        .list-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cta {
+            background: #f1f5f9;
+            text-align: center;
+            border-radius: 40px;
+            margin: 40px auto 100px;
+            padding: 80px 40px;
+            max-width: 1000px;
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            padding: 20px 45px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(26, 54, 93, 0.2);
+        }
+
+        button:hover {
+            background: #334155;
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--primary);
+            opacity: 0.7;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 768px) {
+            .ecosystem { flex-direction: column; margin-top: -60px; }
+            header { padding: 80px 20px 120px; }
+            section { padding: 60px 20px; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Neurocharge Medical</h1>
-    </header>
-    <main>
-        <section class="ecosystem-cards">
-            <div class="card">
-                <h2>Card 1</h2>
-                <p>Description of ecosystem item 1.</p>
-            </div>
-            <div class="card">
-                <h2>Card 2</h2>
-                <p>Description of ecosystem item 2.</p>
-            </div>
-            <div class="card">
-                <h2>Card 3</h2>
-                <p>Description of ecosystem item 3.</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Neurocharge Medical</p>
-    </footer>
+
+<header>
+    <span class="tagline">The Future of Neurodivergent Support</span>
+    <h1>Objective Support for Neurodivergent Lives</h1>
+    <p>Redefining how attention, overwhelm, and regulation challenges are understood and supported through a unified ecosystem.</p>
+</header>
+
+<div class="ecosystem">
+    <div class="card">
+        <h3>NeuroCharge</h3>
+        <p>Providing faster, objective diagnostic support to reduce clinician burdens and address the wait-time crisis.</p>
+    </div>
+    <div class="card">
+        <h3>Rezen8</h3>
+        <p>Offering ongoing, proactive regulation support to manage daily challenges and prevent overwhelm.</p>
+    </div>
+</div>
+
+<section>
+    <div class="content-block">
+        <h2>The Problem</h2>
+        <p>Millions of neurodivergent individuals face delayed assessments, subjective evaluations, and reactive care models. Support often relies heavily on self-reporting or short clinical observations.</p>
+        <p style="margin-top: 15px;">This leads to long wait times, inconsistent outcomes, and daily regulation challenges that go unaddressed between appointments.</p>
+    </div>
+
+    <div class="content-block">
+        <h2>The Solution</h2>
+        <p>We are building an integrated approach to identify and support neurodivergent regulation patterns in a more objective and accessible way.</p>
+        <ul class="list-style">
+            <li class="list-item">Support faster, more informed assessments</li>
+            <li class="list-item">Provide ongoing daily regulation support</li>
+            <li class="list-item">Reduce reliance on purely reactive care</li>
+            <li class="list-item">Empower individuals with proactive tools</li>
+        </ul>
+    </div>
+
+    <div class="content-block">
+        <h2>Our Vision</h2>
+        <p>A future where neurodivergent individuals are supported with clarity, autonomy, and non-invasive solutions that work alongside existing care.</p>
+    </div>
+</section>
+
+<div class="cta">
+    <h2>Get Involved</h2>
+    <p style="margin: 20px 0 30px; font-size: 1.1rem;">We are currently engaging early collaborators, clinicians, and strategic partners.</p>
+    <button>Join the Waitlist</button>
+</div>
+
+<footer>
+    © 2026 NeuroCharge. All rights reserved.
+</footer>
+
 </body>
 </html>
