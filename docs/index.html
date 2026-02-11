@@ -1,186 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NeuroCharge — AI-Driven ADHD Diagnostic Support & ANS Monitoring</title>
-  <meta name="description" content="NeuroCharge is a Class IIa medical device providing real-time ANS biosensing to reduce ADHD diagnosis wait times and optimize medication titration." />
-
-  <meta property="og:title" content="NeuroCharge — Leading the Future of Neurodivergent Care" />
-  <meta property="og:description" content="Reducing ADHD wait times through AI-driven oral biosensing and continuous ANS monitoring." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/TREANERI/neurocharge-waitlist/main/docs/og-image.png" />
-
-  <style>
-    :root{--bg:#0b0b11;--bg-soft:#0f1222;--card:#12162b;--text:#e9ecf1;--muted:#b8c0d2;--brand:#3b82f6;--brand-2:#2563eb;--accent:#60a5fa;--ok:#22c55e;--ring:rgba(59,130,246,.4)}
-    @media (prefers-color-scheme: light){:root{--bg:#f8fafc;--bg-soft:#eef2ff;--card:#ffffff;--text:#0b1220;--muted:#475569;--brand:#2563eb;--brand-2:#1d4ed8;--accent:#1e40af;--ok:#16a34a;--ring:rgba(37,99,235,.25)}.hero:before{opacity:.08}}
-    body{margin:0;background:linear-gradient(180deg,var(--bg) 0%, var(--bg-soft) 100%);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
-    .container{max-width:1120px;margin:0 auto;padding:24px}
-    .hero{position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06)}
-    .hero:before{content:"";position:absolute;inset:-20% -10% auto -10%;height:70vh;background:radial-gradient(600px 600px at 20% 20%, var(--accent), transparent 60%), radial-gradient(700px 700px at 80% -10%, var(--brand), transparent 55%);opacity:.18;filter:blur(6px);}
-    .hero-inner{position:relative;z-index:1;display:grid;gap:20px;align-items:center;grid-template-columns:1.2fr 1fr;}
-    @media (max-width:900px){.hero-inner{grid-template-columns:1fr}}
-    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(99,102,241,.15);color:#e0e7ff;border:1px solid rgba(99,102,241,.35);padding:6px 10px;border-radius:999px;font-size:12px}
-    .title{font-size:clamp(28px,6vw,52px);line-height:1.1;margin:8px 0 8px}
-    .subtitle{font-size:clamp(16px,2.6vw,20px);color:var(--muted);margin:0 0 18px}
-    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
-    .btn{appearance:none;border:0;border-radius:14px;padding:14px 18px;font-weight:600;cursor:pointer;text-decoration:none}
-    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:white;box-shadow:0 10px 25px -8px var(--ring)}
-    .btn-secondary{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.12)}
-    .trust{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:14px}
-    .trust .dot{width:6px;height:6px;border-radius:999px;background:var(--ok);margin-right:6px}
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
-    @media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:640px){.grid{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);padding:18px;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.18)}
-    .section{padding:32px 0}
-    .section h2{font-size:24px;margin:0 0 12px}
-    .section p.lead{margin:0 0 18px;color:var(--muted)}
-    .founder-flex {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      /* Glassmorphism Effect */
-      background: rgba(255, 255, 255, 0.03); 
-      backdrop-filter: blur(12px); 
-      -webkit-backdrop-filter: blur(12px);
-      
-      padding: 40px;
-      border-radius: 30px; /* Rounded corners */
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      margin-top: 40px;
-    }
-
-    @media (max-width: 640px) {
-      .founder-flex {
-        flex-direction: column; 
-        text-align: center;
-        padding: 24px;
-      }
-    }
-
-    .founder-img {
-      width: 180px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.3)); /* Soft blue glow */
-      image-rendering: -webkit-optimize-contrast;
-      transition: transform 0.3s ease;
-    }
-
-    .founder-img:hover {
-      transform: scale(1.05); /* Interactive pop */
-    }
-
-    footer {
-      padding: 30px 0;
-      color: var(--muted);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    a { color: inherit; }
-    .small { font-size: 12px; color: var(--muted); }
-    .note { font-size: 12px; color: var(--muted); margin-top: 10px; }
-  </style>
+    <meta charset="UTF-8">
+    <title>NeuroCharge | Objective Support for Neurodivergent Minds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #222;
+        }
+        header {
+            background: #111;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        .cta {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            background: #111;
+            color: white;
+            cursor: pointer;
+        }
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
 </head>
-
 <body>
-  <header class="hero">
-    <div class="container hero-inner">
-      <div>
-        <span class="badge">Class IIa Medical Device · Patent-pending</span>
-        <h1 class="title">NeuroCharge</h1>
-        <p class="subtitle">AI-driven oral biosensing dedicated to reducing ADHD wait times and accelerating diagnostic accuracy through real-time ANS monitoring.</p>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#updates">Join the waitlist</a>
-          <a class="btn btn-secondary" href="#about">Our Mission</a>
-        </div>
+<header>
+    <h1>Objective Support for Neurodivergent Lives</h1>
+    <p>Redefining how attention, overwhelm, and regulation challenges are understood and supported.</p>
+</header>
 
-        <div class="trust">
-          <div><span class="dot"></span>HRV/EDA Biosensing</div>
-          <div><span class="dot"></span>Proactive</div>
-          <div><span class="dot"></span>Clinical Titration Support</div>
-        </div>
-      </div>
-
-      <div>
-        <div class="card">
-          <h3>The ADHD Game-Changer</h3>
-          <p class="small">By bridging the gap between hospital and home, NeuroCharge provides the objective physiological data needed to speed up diagnosis and personalize treatment pathways.</p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <section id="about" class="section">
-      <h2>Solving the Diagnostic Crisis</h2>
-      <p class="lead">
-        Millions of neurodivergent individuals face years of waiting for answers. NeuroCharge is a non-invasive platform that monitors autonomic nervous system (ANS) dysregulation, providing clinicians with the real-time data required to shorten titration periods and deliver instantaneous digital biofeedback.
-      </p>
-
-      <div class="grid">
-        <article class="card"><h3>Continuous Monitoring</h3><p>Captures HRV + EDA signals to anticipate stress before burnout occurs.</p></article>
-        <article class="card"><h3>Faster Titration</h3><p>Objective data helps clinicians find the right medication balance in weeks, not months.</p></article>
-        <article class="card"><h3>Empowered Patients</h3><p>Real-time insights for neurodivergent individuals to manage cognitive load proactively.</p></article>
-      </div>
-    </section>
-<section class="section">
-  <div class="founder-flex">
-    <img src="https://raw.githubusercontent.com/TREANERI/neurocharge-waitlist/main/docs/images/neurocharge-logo-ai-biosensing.png" alt="NeuroCharge AI Biosensing Logo" class="founder-img">
-    <div>
-      <h2 style="margin-top:0; color: var(--accent);">Our Mission</h2>
-      <p style="font-size: 1.1rem; line-height: 1.7;">
-        NeuroCharge was founded by <strong>Amal Omar</strong> to bring empathy and physiological precision to the ADHD community. 
-        As a <strong>neurodivergent founder</strong>, Amal is leading the development of this Class IIa medical device to bridge the gap in ADHD care. 
-        By monitoring ANS dysregulation through real-time HRV and EDA data, we aim to shorten titration periods and empower individuals with proactive stress management tools.
-      </p>
-    </div>
-  </div>
+<section>
+    <h2>The Problem</h2>
+    <p>
+        Millions of neurodivergent individuals struggle with delayed assessments,
+        subjective evaluations, and reactive care models. Support often relies heavily
+        on self-reporting, short clinical observations, or medication as a first-line solution.
+    </p>
+    <p>
+        This creates long wait times, inconsistent outcomes, and daily challenges that
+        go unaddressed between appointments.
+    </p>
 </section>
 
-    <section id="updates" class="section">
-      <h2>Join the Waitlist</h2>
-      <p class="lead">Help us lead the shift toward personalized neuro-support. Join our early pilots.</p>
+<section>
+    <h2>The Solution</h2>
+    <p>
+        We are building an integrated approach to help identify and support
+        neurodivergent regulation patterns in a more objective, accessible way.
+    </p>
+    <p>
+        Our platform aims to:
+    </p>
+    <ul>
+        <li>Support faster, more informed assessments</li>
+        <li>Provide ongoing daily regulation support</li>
+        <li>Reduce reliance on purely reactive care</li>
+        <li>Empower individuals with proactive tools</li>
+    </ul>
+</section>
 
-      <div class="card" style="position:relative;overflow:hidden;padding-top:10px;">
-        <p style="text-align:center;padding:20px;color:#e9ecf1;background:rgba(0,0,0,0.4);border-radius:8px;">
-          To join the waitlist, please
-          <a href="https://forms.gle/QtBix5ZvRES4oZJu9">open the form in a new tab</a>.
-        </p>
-      </div>
-      <p class="note">Only NeuroCharge updates. Unsubscribe anytime.</p>
-    </section>
-  </main>
+<section>
+    <h2>Our Vision</h2>
+    <p>
+        A future where neurodivergent individuals are supported with clarity,
+        autonomy, and non-invasive solutions that work alongside existing care —
+        not in place of it.
+    </p>
+</section>
 
-  <footer>
-    <div class="container small">© <span id="year"></span> NeuroCharge Medical Device · Birmingham, UK · All rights reserved.</div>
-  </footer>
+<section class="cta">
+    <h2>Get Involved</h2>
+    <p>
+        We are currently engaging early collaborators, clinicians, and strategic partners.
+    </p>
+    <button>Join the Waitlist</button>
+</section>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<footer>
+    © 2026 NeuroCharge. All rights reserved.
+</footer>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    "name": "NeuroCharge",
-    "founder": {
-      "@type": "Person",
-      "name": "Amal Omar"
-    },
-    "description": "AI-driven oral biosensing platform and Class IIa medical device for ADHD diagnostics and ANS monitoring.",
-    "location": {
-      "@type": "Place",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Birmingham",
-        "addressCountry": "UK"
-      }
-    }
-  }
-  </script>
 </body>
 </html>
